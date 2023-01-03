@@ -85,13 +85,13 @@ const messageDiv = document.getElementById(uniqueId);
 loader(messageDiv);
 
 
-const response = await fetch("https://chatbot-sijj.onrender.com/", {
+const response = await fetch("http://localhost:5000", {
   method:"POST",
   headers:{
     "Content-Type":"application/json",
   },
   body:JSON.stringify({
-    prompt:data.get("prompt")
+    prompt: data.get("prompt")
   })
 })
 console.log(response);
